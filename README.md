@@ -19,7 +19,7 @@ In particular, the files in the code directory do the following:
 * extract_ads.py: functionality of extract_ads.ipynb in a .py file, for ease of use
 * optical_character_recongition.ipynb: code to extract contents from ads using optical character recongition 
 
-The plots direcotry contains:
+The plots directory contains:
 * model training history, showing the test / validation loss and accuracy each epoch
 * receiver operating characteristic curve (roc) for model
 
