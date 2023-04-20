@@ -1,7 +1,7 @@
 # UMSI Capstone Project: Biased Online Ads
 Noah Chazonoff, Brandon Huggard, Haley Johnson, Dani Lazarus, and Nicole Savitsky
 
-Weights and extracted segments are too large to upload to Github, please see Google Drive links
+The model weights and the extracted ad segments are too large to host to Github (>50MB), please see Google Drive links
 * <a href = "https://drive.google.com/file/d/1Z7ZsmYvKICdjNg5ye6Jv11LeiFFsebZP/view?usp=share_link">final weights</a>
 * <a href = "https://drive.google.com/file/d/1bg4chDVzaXWazBcjy7TLG5qrDZ5m6bWu/view?usp=share_link">data (raw images, predicted masks, extracted ads)</a>
 
