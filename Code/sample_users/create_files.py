@@ -80,19 +80,10 @@ def block_randomization(user_summary, sites, n):
     return sample_df
     
 
-def main():
-    '''
-    Main function to run the block randomization simulation.
-    '''
-    # run inside biased_online_ads directory
-    user_summary = pd.read_csv("files/user-summary.csv")
-    sites = create_site_look_up('user_1000')
-    sites.to_csv('files/sites.csv')
-    
-    sample = block_randomization(user_summary, sites, 4)
-    sample.to_csv("files/sampled_users.csv", index = False)
-
-    return None 
-
 if __name__ == "__main__":
-    main()
+    user_summary = sys.argv[1]
+    sites = sys.argv[2]
+    sample_files_path = sys.argv[3]
+
+    sample = block_randomization(user_summary, sites, 4)
+    sample.to_csv(os.path.join("sampled_users.csv"), index = False)

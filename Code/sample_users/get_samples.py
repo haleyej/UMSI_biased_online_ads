@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import glob
 import random
-
+import sys
 
 def get_targets(samples: pd.DataFrame, samples_path: str) -> dict:
     '''
@@ -95,9 +95,16 @@ def extract_samples(targets: dict, samples: pd.DataFrame, samples_path: str,
     return failed_df
 
 
-def main():
-    samples = pd.read_csv("/Users/haleyjohnson/Desktop/biased_online_ads/files/sampled_users.csv")
+if __name__ == "__main__":
+    samples = sys.argv[1]
+    samples_path = sys.argv[2]
+    extract_path = sys.arv[3]
+    end_path = sys.argv[4]
+    save_failed = sys.argv[5]
 
-    # Define absolute paths
-    samples_path = '/Volumes/Sensitive Group Browsing/Sensitive Group Browsing/Screenshots'
-    extract_path = '/Users
+    targets = get_targets(samples, samples_path)
+
+    failed_df = extract_samples(targets, samples, samples_path, extract_path, end_path)
+
+    if save_failed:
+        failed_df.to_csv('failed_to_sample')
