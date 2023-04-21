@@ -65,8 +65,9 @@ if __name__ == "__main__":
     MASK_PATH = sys.argv[2]
     SAVE_PATH = sys.argv[3]
     SHAPE = sys.argv[4]
+    PADDING = sys.argv[5]
 
     mask_files = os.listdir(MASK_PATH)
 
     for mask in mask_files:
-        extract_ads(mask)
+        extract_ads(mask, image_path = IMAGE_PATH, mask_path = MASK_PATH, save_path = SAVE_PATH, shape = SHAPE, padding = PADDING)
